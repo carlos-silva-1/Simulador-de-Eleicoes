@@ -1,0 +1,216 @@
+\hypertarget{eleicoes_8php}{}\doxysection{eleicoes.\+php File Reference}
+\label{eleicoes_8php}\index{eleicoes.php@{eleicoes.php}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{eleicoes_8php_a445389ddfffe227dbc6d8add234ced18}{print\+\_\+header}} ()
+\item 
+\mbox{\hyperlink{eleicoes_8php_aca392b2f53056eeb40bf85ca439e6bd7}{print\+\_\+table\+\_\+head\+\_\+vereadores}} ()
+\item 
+\mbox{\hyperlink{eleicoes_8php_ac15c34eb474cb5c737628bd01193bbde}{print\+\_\+table\+\_\+vereadores}} (\$vereadores, \&\$empate, \&\$maior\+\_\+voto\+\_\+vereador, \&\$vereadores\+\_\+vencedor)
+\item 
+\mbox{\hyperlink{eleicoes_8php_adc325d29de78e8b150f70633116e2950}{print\+\_\+vencedor\+\_\+vereador}} (\$empate, \$vereadores\+\_\+vencedor, \$maior\+\_\+voto\+\_\+vereador)
+\item 
+\mbox{\hyperlink{eleicoes_8php_a6b61e415ec075133f0c4cf246c71c2d6}{print\+\_\+table\+\_\+head\+\_\+prefeitos}} ()
+\item 
+\mbox{\hyperlink{eleicoes_8php_a6d0fd7e26f7dff3fa392945df598dd93}{print\+\_\+table\+\_\+prefeitos}} (\$prefeitos, \&\$empate, \&\$maior\+\_\+voto\+\_\+prefeito, \&\$prefeitos\+\_\+vencedor, \$db\+\_\+connection)
+\item 
+\mbox{\hyperlink{eleicoes_8php_a5c87eaedba563e5bdbbb12653899126a}{print\+\_\+vencedor\+\_\+prefeito}} (\$empate, \$prefeitos\+\_\+vencedor, \$maior\+\_\+voto\+\_\+prefeito)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{eleicoes_8php_a0c6b69a245f4fabdcb5dfaaa4536fc09}{\$vereadores}} = \$db\+\_\+connection-\/$>$query(\char`\"{}SELECT $\ast$ FROM Vereador ORDER BY votos DESC, nome ASC;\char`\"{})
+\begin{DoxyCompactList}\small\item\em dados dos vereadores do banco de dados \end{DoxyCompactList}\item 
+\mbox{\hyperlink{eleicoes_8php_a07cb94f972fed9ef90e930ceae304b32}{\$prefeitos}} = \$db\+\_\+connection-\/$>$query(\char`\"{}SELECT $\ast$ FROM Prefeito ORDER BY votos DESC, nome ASC;\char`\"{})
+\begin{DoxyCompactList}\small\item\em dados dos prefeitos do banco de dados \end{DoxyCompactList}\item 
+\mbox{\hyperlink{eleicoes_8php_ac0485279eb6bbdc4f888e30e38d71933}{\$vices}} = \$db\+\_\+connection-\/$>$query(\char`\"{}SELECT $\ast$ FROM Vice ORDER BY nome ASC;\char`\"{})
+\begin{DoxyCompactList}\small\item\em dados dos prefeitos do banco de dados \end{DoxyCompactList}\item 
+\mbox{\hyperlink{eleicoes_8php_a0f48b6bf9342061739b3eaece7237866}{\$empate}} = \mbox{[}false, false\mbox{]}
+\begin{DoxyCompactList}\small\item\em array booleano indicando se houve empate na eleição \end{DoxyCompactList}\item 
+\mbox{\hyperlink{eleicoes_8php_ae77b8bdc28c2e7b2478ff1970b1641ae}{\$maior\+\_\+voto\+\_\+vereador}} = 0
+\begin{DoxyCompactList}\small\item\em número de votos obtido pelo candidato vencedor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{eleicoes_8php_af04f0cc82662879784001949ec8964fd}{\$vereadores\+\_\+vencedor}} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em array contendo o(s) vencedor(es) da eleição para vereador \end{DoxyCompactList}\item 
+\mbox{\hyperlink{eleicoes_8php_a2e6df741fc0352f1c8bab006defd9513}{\$maior\+\_\+voto\+\_\+prefeito}} = 0
+\begin{DoxyCompactList}\small\item\em número de votos obtido pelo candidato vencedor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{eleicoes_8php_a37fe85a25d489212b7c0b2835a1f4e76}{\$prefeitos\+\_\+vencedor}} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em array contendo o(s) vencedor(es) da eleição para prefeito \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{eleicoes_8php_a445389ddfffe227dbc6d8add234ced18}\label{eleicoes_8php_a445389ddfffe227dbc6d8add234ced18}} 
+\index{eleicoes.php@{eleicoes.php}!print\_header@{print\_header}}
+\index{print\_header@{print\_header}!eleicoes.php@{eleicoes.php}}
+\doxysubsubsection{\texorpdfstring{print\_header()}{print\_header()}}
+{\footnotesize\ttfamily print\+\_\+header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Imprime o header da página de resultados \mbox{\Hypertarget{eleicoes_8php_a6b61e415ec075133f0c4cf246c71c2d6}\label{eleicoes_8php_a6b61e415ec075133f0c4cf246c71c2d6}} 
+\index{eleicoes.php@{eleicoes.php}!print\_table\_head\_prefeitos@{print\_table\_head\_prefeitos}}
+\index{print\_table\_head\_prefeitos@{print\_table\_head\_prefeitos}!eleicoes.php@{eleicoes.php}}
+\doxysubsubsection{\texorpdfstring{print\_table\_head\_prefeitos()}{print\_table\_head\_prefeitos()}}
+{\footnotesize\ttfamily print\+\_\+table\+\_\+head\+\_\+prefeitos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Imprime o header (título e nome das colunas) da tabela de prefeitos \mbox{\Hypertarget{eleicoes_8php_aca392b2f53056eeb40bf85ca439e6bd7}\label{eleicoes_8php_aca392b2f53056eeb40bf85ca439e6bd7}} 
+\index{eleicoes.php@{eleicoes.php}!print\_table\_head\_vereadores@{print\_table\_head\_vereadores}}
+\index{print\_table\_head\_vereadores@{print\_table\_head\_vereadores}!eleicoes.php@{eleicoes.php}}
+\doxysubsubsection{\texorpdfstring{print\_table\_head\_vereadores()}{print\_table\_head\_vereadores()}}
+{\footnotesize\ttfamily print\+\_\+table\+\_\+head\+\_\+vereadores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Imprime o header (título e nome das colunas) da tabela de vereadores \mbox{\Hypertarget{eleicoes_8php_a6d0fd7e26f7dff3fa392945df598dd93}\label{eleicoes_8php_a6d0fd7e26f7dff3fa392945df598dd93}} 
+\index{eleicoes.php@{eleicoes.php}!print\_table\_prefeitos@{print\_table\_prefeitos}}
+\index{print\_table\_prefeitos@{print\_table\_prefeitos}!eleicoes.php@{eleicoes.php}}
+\doxysubsubsection{\texorpdfstring{print\_table\_prefeitos()}{print\_table\_prefeitos()}}
+{\footnotesize\ttfamily print\+\_\+table\+\_\+prefeitos (\begin{DoxyParamCaption}\item[{}]{\$prefeitos,  }\item[{\&}]{\$empate,  }\item[{\&}]{\$maior\+\_\+voto\+\_\+prefeito,  }\item[{\&}]{\$prefeitos\+\_\+vencedor,  }\item[{}]{\$db\+\_\+connection }\end{DoxyParamCaption})}
+
+Imprime os dados da tabela de prefeitos. Insere os votos computados na tabela. Descobre que é (são) os candidatos que receberam mais votos.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}prefeitos\mbox{]}} & dados da tabela dos prefeitos \\
+\hline
+{\em \mbox{[}empate\mbox{]}} & array booleano; indica se houve empate na eleição \\
+\hline
+{\em \mbox{[}maior\+\_\+voto\+\_\+prefeito\mbox{]}} & quantidade de votos que o vencedor obteve \\
+\hline
+{\em \mbox{[}prefeitos\+\_\+vencedor\mbox{]}} & array contendo o(s) vencedor(es) \\
+\hline
+{\em \mbox{[}db\+\_\+connection\mbox{]}} & conexão para o servidor mysql \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{eleicoes_8php_ac15c34eb474cb5c737628bd01193bbde}\label{eleicoes_8php_ac15c34eb474cb5c737628bd01193bbde}} 
+\index{eleicoes.php@{eleicoes.php}!print\_table\_vereadores@{print\_table\_vereadores}}
+\index{print\_table\_vereadores@{print\_table\_vereadores}!eleicoes.php@{eleicoes.php}}
+\doxysubsubsection{\texorpdfstring{print\_table\_vereadores()}{print\_table\_vereadores()}}
+{\footnotesize\ttfamily print\+\_\+table\+\_\+vereadores (\begin{DoxyParamCaption}\item[{}]{\$vereadores,  }\item[{\&}]{\$empate,  }\item[{\&}]{\$maior\+\_\+voto\+\_\+vereador,  }\item[{\&}]{\$vereadores\+\_\+vencedor }\end{DoxyParamCaption})}
+
+Imprime os dados da tabela de vereadores. Insere os votos computados na tabela. Descobre que é (são) os candidatos que receberam mais votos.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}vereadores\mbox{]}} & dados da tabela dos vereadores \\
+\hline
+{\em \mbox{[}empate\mbox{]}} & array booleano; indica se houve empate na eleição \\
+\hline
+{\em \mbox{[}maior\+\_\+voto\+\_\+vereador\mbox{]}} & quantidade de votos que o vencedor obteve \\
+\hline
+{\em \mbox{[}vereadores\+\_\+vencedor\mbox{]}} & array contendo o(s) vencedor(es) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{eleicoes_8php_a5c87eaedba563e5bdbbb12653899126a}\label{eleicoes_8php_a5c87eaedba563e5bdbbb12653899126a}} 
+\index{eleicoes.php@{eleicoes.php}!print\_vencedor\_prefeito@{print\_vencedor\_prefeito}}
+\index{print\_vencedor\_prefeito@{print\_vencedor\_prefeito}!eleicoes.php@{eleicoes.php}}
+\doxysubsubsection{\texorpdfstring{print\_vencedor\_prefeito()}{print\_vencedor\_prefeito()}}
+{\footnotesize\ttfamily print\+\_\+vencedor\+\_\+prefeito (\begin{DoxyParamCaption}\item[{}]{\$empate,  }\item[{}]{\$prefeitos\+\_\+vencedor,  }\item[{}]{\$maior\+\_\+voto\+\_\+prefeito }\end{DoxyParamCaption})}
+
+Imprime o nome do(s) vencedor(es) da eleição para prefeito. No caso de empate, todos os candidatos que conseguiram o maior número de votos são considerados vencedores.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}empate\mbox{]}} & array booleano; indica se houve empate na eleição \\
+\hline
+{\em \mbox{[}prefeitos\+\_\+vencedor\mbox{]}} & array contendo o(s) vencedor(es) \\
+\hline
+{\em \mbox{[}maior\+\_\+voto\+\_\+prefeito\mbox{]}} & quantidade de votos que o vencedor obteve \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{eleicoes_8php_adc325d29de78e8b150f70633116e2950}\label{eleicoes_8php_adc325d29de78e8b150f70633116e2950}} 
+\index{eleicoes.php@{eleicoes.php}!print\_vencedor\_vereador@{print\_vencedor\_vereador}}
+\index{print\_vencedor\_vereador@{print\_vencedor\_vereador}!eleicoes.php@{eleicoes.php}}
+\doxysubsubsection{\texorpdfstring{print\_vencedor\_vereador()}{print\_vencedor\_vereador()}}
+{\footnotesize\ttfamily print\+\_\+vencedor\+\_\+vereador (\begin{DoxyParamCaption}\item[{}]{\$empate,  }\item[{}]{\$vereadores\+\_\+vencedor,  }\item[{}]{\$maior\+\_\+voto\+\_\+vereador }\end{DoxyParamCaption})}
+
+Imprime o nome do(s) vencedor(es) da eleição para vereador. No caso de empate, todos os candidatos que conseguiram o maior número de votos são considerados vencedores.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}empate\mbox{]}} & array booleano; indica se houve empate na eleição \\
+\hline
+{\em \mbox{[}vereadores\+\_\+vencedor\mbox{]}} & array contendo o(s) vencedor(es) \\
+\hline
+{\em \mbox{[}maior\+\_\+voto\+\_\+vereador\mbox{]}} & quantidade de votos que o vencedor obteve \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{eleicoes_8php_a0f48b6bf9342061739b3eaece7237866}\label{eleicoes_8php_a0f48b6bf9342061739b3eaece7237866}} 
+\index{eleicoes.php@{eleicoes.php}!\$empate@{\$empate}}
+\index{\$empate@{\$empate}!eleicoes.php@{eleicoes.php}}
+\doxysubsubsection{\texorpdfstring{\$empate}{$empate}}
+{\footnotesize\ttfamily \$empate = \mbox{[}false, false\mbox{]}}
+
+
+
+array booleano indicando se houve empate na eleição 
+
+\mbox{\Hypertarget{eleicoes_8php_a2e6df741fc0352f1c8bab006defd9513}\label{eleicoes_8php_a2e6df741fc0352f1c8bab006defd9513}} 
+\index{eleicoes.php@{eleicoes.php}!\$maior\_voto\_prefeito@{\$maior\_voto\_prefeito}}
+\index{\$maior\_voto\_prefeito@{\$maior\_voto\_prefeito}!eleicoes.php@{eleicoes.php}}
+\doxysubsubsection{\texorpdfstring{\$maior\_voto\_prefeito}{$maior\_voto\_prefeito}}
+{\footnotesize\ttfamily \$maior\+\_\+voto\+\_\+prefeito = 0}
+
+
+
+número de votos obtido pelo candidato vencedor 
+
+\mbox{\Hypertarget{eleicoes_8php_ae77b8bdc28c2e7b2478ff1970b1641ae}\label{eleicoes_8php_ae77b8bdc28c2e7b2478ff1970b1641ae}} 
+\index{eleicoes.php@{eleicoes.php}!\$maior\_voto\_vereador@{\$maior\_voto\_vereador}}
+\index{\$maior\_voto\_vereador@{\$maior\_voto\_vereador}!eleicoes.php@{eleicoes.php}}
+\doxysubsubsection{\texorpdfstring{\$maior\_voto\_vereador}{$maior\_voto\_vereador}}
+{\footnotesize\ttfamily \$maior\+\_\+voto\+\_\+vereador = 0}
+
+
+
+número de votos obtido pelo candidato vencedor 
+
+\mbox{\Hypertarget{eleicoes_8php_a07cb94f972fed9ef90e930ceae304b32}\label{eleicoes_8php_a07cb94f972fed9ef90e930ceae304b32}} 
+\index{eleicoes.php@{eleicoes.php}!\$prefeitos@{\$prefeitos}}
+\index{\$prefeitos@{\$prefeitos}!eleicoes.php@{eleicoes.php}}
+\doxysubsubsection{\texorpdfstring{\$prefeitos}{$prefeitos}}
+{\footnotesize\ttfamily \$prefeitos = \$db\+\_\+connection-\/$>$query(\char`\"{}SELECT $\ast$ FROM Prefeito ORDER BY votos DESC, nome ASC;\char`\"{})}
+
+
+
+dados dos prefeitos do banco de dados 
+
+\mbox{\Hypertarget{eleicoes_8php_a37fe85a25d489212b7c0b2835a1f4e76}\label{eleicoes_8php_a37fe85a25d489212b7c0b2835a1f4e76}} 
+\index{eleicoes.php@{eleicoes.php}!\$prefeitos\_vencedor@{\$prefeitos\_vencedor}}
+\index{\$prefeitos\_vencedor@{\$prefeitos\_vencedor}!eleicoes.php@{eleicoes.php}}
+\doxysubsubsection{\texorpdfstring{\$prefeitos\_vencedor}{$prefeitos\_vencedor}}
+{\footnotesize\ttfamily \$prefeitos\+\_\+vencedor = \mbox{[}$\,$\mbox{]}}
+
+
+
+array contendo o(s) vencedor(es) da eleição para prefeito 
+
+\mbox{\Hypertarget{eleicoes_8php_a0c6b69a245f4fabdcb5dfaaa4536fc09}\label{eleicoes_8php_a0c6b69a245f4fabdcb5dfaaa4536fc09}} 
+\index{eleicoes.php@{eleicoes.php}!\$vereadores@{\$vereadores}}
+\index{\$vereadores@{\$vereadores}!eleicoes.php@{eleicoes.php}}
+\doxysubsubsection{\texorpdfstring{\$vereadores}{$vereadores}}
+{\footnotesize\ttfamily \$vereadores = \$db\+\_\+connection-\/$>$query(\char`\"{}SELECT $\ast$ FROM Vereador ORDER BY votos DESC, nome ASC;\char`\"{})}
+
+
+
+dados dos vereadores do banco de dados 
+
+Referências\+: \href{https://www.w3schools.com/php/php_mysql_select.asp}{\texttt{ https\+://www.\+w3schools.\+com/php/php\+\_\+mysql\+\_\+select.\+asp}} \href{https://stackoverflow.com/questions/28225931/how-to-get-single-value-from-mysql-query-in-php}{\texttt{ https\+://stackoverflow.\+com/questions/28225931/how-\/to-\/get-\/single-\/value-\/from-\/mysql-\/query-\/in-\/php}} \href{https://www.w3schools.com/php/php_mysql_select_orderby.asp}{\texttt{ https\+://www.\+w3schools.\+com/php/php\+\_\+mysql\+\_\+select\+\_\+orderby.\+asp}} \href{https://www.w3schools.com/php/php_echo_print.asp}{\texttt{ https\+://www.\+w3schools.\+com/php/php\+\_\+echo\+\_\+print.\+asp}} \mbox{\Hypertarget{eleicoes_8php_af04f0cc82662879784001949ec8964fd}\label{eleicoes_8php_af04f0cc82662879784001949ec8964fd}} 
+\index{eleicoes.php@{eleicoes.php}!\$vereadores\_vencedor@{\$vereadores\_vencedor}}
+\index{\$vereadores\_vencedor@{\$vereadores\_vencedor}!eleicoes.php@{eleicoes.php}}
+\doxysubsubsection{\texorpdfstring{\$vereadores\_vencedor}{$vereadores\_vencedor}}
+{\footnotesize\ttfamily \$vereadores\+\_\+vencedor = \mbox{[}$\,$\mbox{]}}
+
+
+
+array contendo o(s) vencedor(es) da eleição para vereador 
+
+\mbox{\Hypertarget{eleicoes_8php_ac0485279eb6bbdc4f888e30e38d71933}\label{eleicoes_8php_ac0485279eb6bbdc4f888e30e38d71933}} 
+\index{eleicoes.php@{eleicoes.php}!\$vices@{\$vices}}
+\index{\$vices@{\$vices}!eleicoes.php@{eleicoes.php}}
+\doxysubsubsection{\texorpdfstring{\$vices}{$vices}}
+{\footnotesize\ttfamily \$vices = \$db\+\_\+connection-\/$>$query(\char`\"{}SELECT $\ast$ FROM Vice ORDER BY nome ASC;\char`\"{})}
+
+
+
+dados dos prefeitos do banco de dados 
+

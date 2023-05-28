@@ -1,0 +1,58 @@
+\hypertarget{main_8php}{}\doxysection{main.\+php File Reference}
+\label{main_8php}\index{main.php@{main.php}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8php_acedd13b51401130848ce18f4d5c52605}{\$json}} = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em json dos votos enviados ao servidor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{main_8php_a6efc15b5a2314dd4b5aaa556a375c6d6}{\$data}} = json\+\_\+decode(\$json)
+\begin{DoxyCompactList}\small\item\em dados dos votos decodificados \end{DoxyCompactList}\item 
+\mbox{\hyperlink{main_8php_a047170d6020a882807665812a27e2525}{\$sql}} = \char`\"{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em string de queries para o servidor mysql \end{DoxyCompactList}\item 
+foreach( \$data as \$d) if(\$db\+\_\+connection-\/$>$multi\+\_\+query(\$sql)===TRUE) \mbox{\hyperlink{main_8php_a29cea44b1441c0593e0537ee9d262b0a}{else}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8php_a6efc15b5a2314dd4b5aaa556a375c6d6}\label{main_8php_a6efc15b5a2314dd4b5aaa556a375c6d6}} 
+\index{main.php@{main.php}!\$data@{\$data}}
+\index{\$data@{\$data}!main.php@{main.php}}
+\doxysubsubsection{\texorpdfstring{\$data}{$data}}
+{\footnotesize\ttfamily \$data = json\+\_\+decode(\$json)}
+
+
+
+dados dos votos decodificados 
+
+\mbox{\Hypertarget{main_8php_acedd13b51401130848ce18f4d5c52605}\label{main_8php_acedd13b51401130848ce18f4d5c52605}} 
+\index{main.php@{main.php}!\$json@{\$json}}
+\index{\$json@{\$json}!main.php@{main.php}}
+\doxysubsubsection{\texorpdfstring{\$json}{$json}}
+{\footnotesize\ttfamily \$json = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})}
+
+
+
+json dos votos enviados ao servidor 
+
+Referências\+: \href{https://www.geeksforgeeks.org/how-to-receive-json-post-with-php/}{\texttt{ https\+://www.\+geeksforgeeks.\+org/how-\/to-\/receive-\/json-\/post-\/with-\/php/}} \href{https://www.w3schools.com/php/php_mysql_insert_multiple.asp}{\texttt{ https\+://www.\+w3schools.\+com/php/php\+\_\+mysql\+\_\+insert\+\_\+multiple.\+asp}} \mbox{\Hypertarget{main_8php_a047170d6020a882807665812a27e2525}\label{main_8php_a047170d6020a882807665812a27e2525}} 
+\index{main.php@{main.php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!main.php@{main.php}}
+\doxysubsubsection{\texorpdfstring{\$sql}{$sql}}
+{\footnotesize\ttfamily \$sql = \char`\"{}\char`\"{}}
+
+
+
+string de queries para o servidor mysql 
+
+\mbox{\Hypertarget{main_8php_a29cea44b1441c0593e0537ee9d262b0a}\label{main_8php_a29cea44b1441c0593e0537ee9d262b0a}} 
+\index{main.php@{main.php}!else@{else}}
+\index{else@{else}!main.php@{main.php}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily foreach(\$data as \$d) if ( \$db\+\_\+connection-\/$>$multi\+\_\+query( \$sql)===TRUE) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    echo \textcolor{stringliteral}{"{}Error: "{}} . \mbox{\hyperlink{main_8php_a047170d6020a882807665812a27e2525}{\$sql}} . \textcolor{stringliteral}{"{}<br>"{}} . \mbox{\hyperlink{sql_8php_af908e1ef16f0db5f47519cb83b633e96}{\$db\_connection}}-\/>error}
+
+\end{DoxyCode}

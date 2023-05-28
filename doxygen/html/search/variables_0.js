@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['_24data_0',['$data',['../main_8php.html#a6efc15b5a2314dd4b5aaa556a375c6d6',1,'main.php']]],
+  ['_24db_5fconnection_1',['$db_connection',['../sql_8php.html#af908e1ef16f0db5f47519cb83b633e96',1,'sql.php']]],
+  ['_24dbname_2',['$dbName',['../sql_8php.html#a68f39949e76b64662a06cb56579d91c3',1,'sql.php']]],
+  ['_24empate_3',['$empate',['../eleicoes_8php.html#a0f48b6bf9342061739b3eaece7237866',1,'eleicoes.php']]],
+  ['_24json_4',['$json',['../main_8php.html#acedd13b51401130848ce18f4d5c52605',1,'main.php']]],
+  ['_24maior_5fvoto_5fprefeito_5',['$maior_voto_prefeito',['../eleicoes_8php.html#a2e6df741fc0352f1c8bab006defd9513',1,'eleicoes.php']]],
+  ['_24maior_5fvoto_5fvereador_6',['$maior_voto_vereador',['../eleicoes_8php.html#ae77b8bdc28c2e7b2478ff1970b1641ae',1,'eleicoes.php']]],
+  ['_24password_7',['$password',['../sql_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d',1,'sql.php']]],
+  ['_24prefeitos_8',['$prefeitos',['../eleicoes_8php.html#a07cb94f972fed9ef90e930ceae304b32',1,'eleicoes.php']]],
+  ['_24prefeitos_5fvencedor_9',['$prefeitos_vencedor',['../eleicoes_8php.html#a37fe85a25d489212b7c0b2835a1f4e76',1,'eleicoes.php']]],
+  ['_24servername_10',['$servername',['../sql_8php.html#ad79b54e31bd1050001133c4d70f850fe',1,'sql.php']]],
+  ['_24sql_11',['$sql',['../main_8php.html#a047170d6020a882807665812a27e2525',1,'main.php']]],
+  ['_24username_12',['$username',['../sql_8php.html#a0eb82aa5f81cf845de4b36cd653c42cf',1,'sql.php']]],
+  ['_24vereadores_13',['$vereadores',['../eleicoes_8php.html#a0c6b69a245f4fabdcb5dfaaa4536fc09',1,'eleicoes.php']]],
+  ['_24vereadores_5fvencedor_14',['$vereadores_vencedor',['../eleicoes_8php.html#af04f0cc82662879784001949ec8964fd',1,'eleicoes.php']]],
+  ['_24vices_15',['$vices',['../eleicoes_8php.html#ac0485279eb6bbdc4f888e30e38d71933',1,'eleicoes.php']]]
+];
